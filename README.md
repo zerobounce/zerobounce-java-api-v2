@@ -43,7 +43,7 @@ timeoutSeconds | Timeout settings in seconds, setting this enables you to contro
 |:--- |:--- 
 getEmailAddress()  | The email address you are validating. 
 getStatus() | Valid /Invalid /Catch-All /Unknown /Spamtrap /Abuse /DoNotMail 
-getSubStatus()  |antispam_system /greylisted /mail_server_temporary_error /forcible_disconnect /mail_server_did_not_respond /timeout_exceeded /failed_smtp_connection /mailbox_quota_exceeded /exception_occurred /possible_traps /role_based /global_suppression /mailbox_not_found /no_dns_entries /failed_syntax_check /possible_typo /unroutable_ip_address /leading_period_removed /does_not_accept_mail /alias_address
+getSubStatus()  |antispam_system /greylisted /mail_server_temporary_error /forcible_disconnect /mail_server_did_not_respond /timeout_exceeded /failed_smtp_connection /mailbox_quota_exceeded /exception_occurred /possible_traps /role_based /global_suppression /mailbox_not_found /no_dns_entries /failed_syntax_check /possible_typo /unroutable_ip_address /leading_period_removed /role_based_catch_all /does_not_accept_mail /alias_address
 getAccount() | The portion of the email address before the "@" symbol.
 getDomain() | The portion of the email address after the "@" symbol
 getDidYouMean() | Suggestive Fix for an email typo or [null]
