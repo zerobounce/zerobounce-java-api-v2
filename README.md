@@ -1,10 +1,10 @@
-Zerobounce Java API wrapper
+Zerobounce Java API wrapper v2
 =====================
 
-[ZeroBounce](https://www.zerobounce.net) Java API
+[ZeroBounce](https://www.zerobounce.net) Java API v2
 
 
-This is a Java wrapper class example for the ZeroBounce API.
+This is a Java wrapper class example for the ZeroBounce API v2.
 
 The project has 2 dependencies:
 1) Apache HttpClient
@@ -46,8 +46,12 @@ getStatus() | Valid /Invalid /Catch-All /Unknown /Spamtrap /Abuse /DoNotMail
 getSubStatus()  |antispam_system /greylisted /mail_server_temporary_error /forcible_disconnect /mail_server_did_not_respond /timeout_exceeded /failed_smtp_connection /mailbox_quota_exceeded /exception_occurred /possible_traps /role_based /global_suppression /mailbox_not_found /no_dns_entries /failed_syntax_check /possible_typo /unroutable_ip_address /leading_period_removed /does_not_accept_mail /alias_address
 getAccount() | The portion of the email address before the "@" symbol.
 getDomain() | The portion of the email address after the "@" symbol
-isDisposable() |[true/false] If the email domain is diposable, which are usually temporary email addresses.
-isToxic() |[true/false] These domains are known for abuse, spam, and bot created.
+getDidYouMean() | Suggestive Fix for an email typo or [null]
+getDomainAgeDays() | Age of the email domain in days or [null].
+isFreeEmail() |[true/false] If the email comes from a free provider.
+isMXFound() |[true/false] Does the domain have an MX record.
+getMXRecord()  | The preferred MX record of the domain or [null].
+getSMTPProvider()  | The SMTP Provider of the email or [null] (BETA).
 getFirstName()  | The first name of the owner of the email when available or [null].
 getLastName()  |The last name of the owner of the email when available or [null].
 getGender() |The gender of the owner of the email when available or [null].
@@ -100,6 +104,7 @@ getCredits()  | The number of credits left in account for email validation.
 + role_based@example.com
 + timeout_exceeded@example.com
 + unroutable_ip_address@example.com
++ free_email@example.com
 
 **You can this IP to test the GEO Location in the API.**
 
@@ -123,13 +128,9 @@ ZeroBounceApi zeroBounceApi = new ZeroBounceApi("YOUR_API_KEY",TIMEOUT_IN_SECOND
 int credits = zeroBounceApi.getCredits();
 
 // validate email and assign result to a ZeroBounceResponse object
-ZeroBounceResponse validation = zeroBounceApi.validate("some@email.com");
+ZeroBounceResponse validation = zeroBounceApi.validate("some@email.com, "some.ip.address can be blank");
 validation.getEmailAddress();
 validation.getStatus();
 validation.isDisposable();
-
-// validate email with ip and assign result to a ZeroBounceResponseWithIp object
-ZeroBounceResponseWithIp validationWithIp = zeroBounceApi.validateWithIpAddress("some@email.com", "some.ip.address");
-validationWithIp.getEmailAddress();
-validationWithIp.getCountry();
+alidationWithIp.getCountry();
 ```
