@@ -63,9 +63,6 @@ getZipcode() | The zip code the IP address is from.
 getRegion() | The region/state the IP address is from.
 getProcessedAt() |The UTC time the email was validated.
 
-|<b>Property</b>|<b>Possible Values</b> 
-|:--- |:--- 
-
 <b><i>GetCredit</b></i> method:
 
 |<b>Property</b>|<b>Possible Values</b> 
