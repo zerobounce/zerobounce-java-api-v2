@@ -57,17 +57,14 @@ getLastName()  |The last name of the owner of the email when available or [null]
 getGender() |The gender of the owner of the email when available or [null].
 getCreationDate() |The creation date of the email when available or [null].
 getLocation() |The location of the owner of the email when available or [null].
-getProcessedAt() |The UTC time the email was validated.
-
-<b><i>validateWithIpAddress(email, ip)(email)</b></i> method:
-These additional properties are available with the ValidateWithIpAddress method.
-
-|<b>Property</b>|<b>Possible Values</b> 
-|:--- |:--- 
 getCountry()  | The country the IP address is from. 
 getCity() | The city the IP address is from.
 getZipcode() | The zip code the IP address is from.
 getRegion() | The region/state the IP address is from.
+getProcessedAt() |The UTC time the email was validated.
+
+|<b>Property</b>|<b>Possible Values</b> 
+|:--- |:--- 
 
 <b><i>GetCredit</b></i> method:
 
