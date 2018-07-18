@@ -37,7 +37,7 @@ pom.xml file if you're building via Maven (already added if you're cloning this 
 apiKey  | Located in your account.. 
 timeoutSeconds | Timeout settings in seconds, setting this enables you to control how long you are willing to wait for a response from the API. When the timeout occurs an "Unknown" result is returned.
 
-<b><i>Validate(email)</b></i> method:
+<b><i>Validate(email,ip)</b></i> method:
   
 |<b>Property</b>|<b>Possible Values</b> 
 |:--- |:--- 
