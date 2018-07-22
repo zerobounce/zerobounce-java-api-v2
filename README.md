@@ -126,5 +126,5 @@ ZeroBounceResponse validation = zeroBounceApi.validate("some@email.com, "some.ip
 validation.getEmailAddress();
 validation.getStatus();
 validation.isDisposable();
-alidationWithIp.getCountry();
+validation.getCountry();
 ```
