@@ -7,7 +7,7 @@ Zerobounce Java API wrapper v2
 This is a Java wrapper class example for the ZeroBounce API v2.
 
 The project has 2 dependencies:
-1) Apache HttpClient
+1) Apache HttpClient (You can also swap this out and use the java.net (jdk library))
 2) JSON (org.json)
 
 Either download the dependencies separately and add them to
