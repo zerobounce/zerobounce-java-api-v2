@@ -10,6 +10,12 @@ The project has 2 dependencies:
 1) Apache HttpClient (You can also swap this out and use the java.net (jdk library))
 2) JSON (org.json)
 
+We only support TLSv1.2
+
+So be sure to set you TLS Explicity, if you don't have it configured by default to TLS 1.2
+
+java.lang.System.setProperty("https.protocols", "TLSv1.2");
+
 Either download the dependencies separately and add them to
 the relevant path or add the following dependencies to your
 pom.xml file if you're building via Maven (already added if you're cloning this repo):
