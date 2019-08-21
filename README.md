@@ -106,7 +106,7 @@ getCredits()  | The number of credits left in account for email validation.
 + unroutable_ip_address@example.com
 + free_email@example.com
 
-**You can this IP to test the GEO Location in the API.**
+**You can use this IP to test the GEO Location in the API.**
 
 + 99.110.204.1
 
