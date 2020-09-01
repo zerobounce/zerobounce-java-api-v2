@@ -34,7 +34,7 @@ public class ZeroBounceApi {
 	public ZeroBounceApi(String apiKey, int timeoutSeconds) {
 		this.api_key = apiKey;
 
-		RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(10).build();
+		RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(timeoutSeconds * 1000).build();
 		this.httpClient = HttpClients.custom().setDefaultRequestConfig(requestConfig).build();
 	}
 
@@ -66,7 +66,7 @@ public class ZeroBounceApi {
 	 */
 
 	public ZeroBounceResponse validate(String email, String ip) throws IOException, URISyntaxException {
-		URI uri = new URIBuilder(baseUrl + "/validatewithip")
+		URI uri = new URIBuilder(baseUrl + "/validate")
 				.addParameter("api_key", this.api_key)
 				.addParameter("email", email)
 				.addParameter("ip_address", ip)
